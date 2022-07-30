@@ -1,0 +1,97 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Manrope', sans-serif;
+    background-color: hsl(218, 23%, 16%);
+    flex-direction: column;
+    text-align: center;
+}
+
+.container {
+    background-color: hsl(217, 19%, 24%);
+    color: hsl(193, 38%, 86%);
+    border-radius: 15px;
+    padding: 35px;
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    position: relative;
+}
+
+.container h3.adv-id{
+    color:  hsl(150, 100%, 66%);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.75rem;
+    margin-bottom: 25px;
+}
+
+.container p.advice-text {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding-bottom: 70px;
+    position: relative;
+    width: 100%;
+}
+
+.container p.advice-text::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    height: 50px;
+    background: url(./images/pattern-divider-desktop.svg) no-repeat 50%;
+}
+
+.container .changer {
+    background: url(./images/icon-dice.svg) no-repeat 50%;
+    background-size: 40%;
+    width: 50px;
+    height: 50px;
+    background-color: hsl(150, 100%, 66%);
+    position: absolute;
+    bottom: -25px;
+    left: calc(50% - 25px);
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.container .changer:hover {
+    box-shadow: 0 0 30px hsl(150, 100%, 66%);
+}
+
+.attribution { 
+    margin-top: 40px;
+    font-size: 11px;
+    color: hsl(193, 38%, 86%);
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(150, 100%, 66%);
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width:768px) {
+    .container{
+        width: 90vw;
+        padding: 2rem 1.5rem 1rem;
+    }
+    .container p.advice-text:after {
+        background: url(./images/pattern-divider-mobile.svg) no-repeat 50%;
+    }
+}
